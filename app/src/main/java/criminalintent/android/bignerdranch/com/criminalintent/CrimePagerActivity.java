@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import java.util.List;
@@ -19,7 +20,7 @@ import java.util.UUID;
  * Created by aketza on 02.01.18.
  */
 
-public class CrimePagerActivity extends FragmentActivity {
+public class CrimePagerActivity extends AppCompatActivity {
     private static final String EXTRA_CRIME_ID = "com.bignerdranch.android.criminalintent.crime_id";
     private static final String EXTRA_CRIME_POSITION = "com.bignerdranch.android.criminalintent.crime_position";
     private ViewPager mViewPager;

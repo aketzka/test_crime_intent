@@ -10,7 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CrimePagerActivity"
-            android:theme="@style/Base.Theme.AppCompat.Light">
+            android:theme="@style/Base.Theme.AppCompat.Light"
+            android:parentActivityName=".CrimeListActivity">
+            >
+        </activity>
+        <activity android:name=".DatePickerActivity"
+                  android:theme="@style/Base.Theme.AppCompat.Light">
         </activity>
         <activity android:name=".CrimeListActivity"
             android:theme="@style/Base.Theme.AppCompat.Light" >
