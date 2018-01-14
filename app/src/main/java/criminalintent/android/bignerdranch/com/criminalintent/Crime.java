@@ -8,6 +8,16 @@ import java.util.UUID;
  */
 
 public class Crime {
+
+    public Crime(){
+        this(UUID.randomUUID());
+    }
+
+    public Crime(UUID id){
+        mId = id;
+        mDate = new Date();
+    }
+
     public UUID getId() {
         return mId;
     }
@@ -45,9 +55,4 @@ public class Crime {
         mSolved = solved;
     }
 
-    public Crime() {
-    // Генерирование уникального идентификатора
-        mId = UUID.randomUUID();
-        mDate = new Date();
-    }
 }
