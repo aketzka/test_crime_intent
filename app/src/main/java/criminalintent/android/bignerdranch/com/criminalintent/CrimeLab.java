@@ -5,7 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.Environment;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -96,4 +98,12 @@ public class CrimeLab {
         return new CrimeCursorWrapper(cursor);
     }
 
+    public File getPhotoFile(Crime crime){
+        File externalFileDir = mContext.getExternalFilesDir(Environment.DIRECTORY_PICTURES);
+
+        if(externalFileDir == null)
+            return null;
+
+        return new File(externalFileDir, crime.getPhotoFilename());
+    }
 }
